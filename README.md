@@ -3,9 +3,10 @@
 
  1. train_MAA_VVBP.py (fo the sagittal plane)
  2. train_MAA_VVBP2.py (for the coronal plane)
-After training that, we have to train Gsum module by running train_sinonet.py
 
-Then, we can run refinement module
+ After training that, we have to train Gsum module by running train_sinonet.py
+ Then, we can run refinement module
+ 
  3. train_MAA_VVBP3.py
 
  # Test
