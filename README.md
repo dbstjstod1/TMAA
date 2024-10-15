@@ -13,6 +13,7 @@
   To test the image, run the test_scirpt.sh
   1. test_script.sh (for the sagittal plane)
   2. test_script2.sh (for the coronal plane)
+  3. python train_MAA_VVBP3.py --mode test --batch_size 1 (for the refinement module)
 
  # Dataset prepearation
  In this code, we generated VVBP from the original CT image (see the BP_gen.py)
