@@ -1,12 +1,18 @@
-# UNET 구현하기 (003 ~ 008)
-[![논문 작성시 꿀팁-003 UNet: 데이터셋 전처리 하기](https://i.ytimg.com/vi/fWmRYmjF-Xw/sddefault.jpg)](https://www.youtube.com/watch?v=fWmRYmjF-Xw)
+# Training
+ To train the tensor-domain network run the following code sequentially
 
-[![논문 작성시 꿀팁-004 UNet 구조 구현하기](https://i.ytimg.com/vi/sSxdQq9CCx0/sddefault.jpg)](https://www.youtube.com/watch?v=sSxdQq9CCx0)
+ 1. train_MAA_VVBP.py (fo the sagittal plane)
+ 2. train_MAA_VVBP2.py (for the coronal plane)
+After training that, we have to train Gsum module by running train_sinonet.py
 
-[![논문 작성시 꿀팁-005 Data loader & transform 구현하기](https://i.ytimg.com/vi/1gMnChpUS9k/sddefault.jpg)](https://www.youtube.com/watch?v=1gMnChpUS9k)
+Then, we can run refinement module
+ 3. train_MAA_VVBP3.py
 
-[![논문 작성시 꿀팁-006 UNet training 시키기](https://i.ytimg.com/vi/rBb597ct_FQ/sddefault.jpg)](https://www.youtube.com/watch?v=rBb597ct_FQ)
+ # Test
+  To test the image, run the test_scirpt.sh
+  1. test_script.sh (for the sagittal plane)
+  2. test_script2.sh (for the coronal plane)
 
-[![논문 작성시 꿀팁-007 UNet testing 시키기](https://i.ytimg.com/vi/igvk1W1JtHA/sddefault.jpg)](https://www.youtube.com/watch?v=igvk1W1JtHA)
-
-[![논문 작성시 꿀팁-008 Code 최적화 & parser 추가하기](https://i.ytimg.com/vi/CLL9FWfsMTo/sddefault.jpg)](https://www.youtube.com/watch?v=CLL9FWfsMTo)
+ # Dataset prepearation
+ In this code, we generated VVBP from the original CT image (see the BP_gen.py)
+ The exclusive data processing files is in the data folder.
